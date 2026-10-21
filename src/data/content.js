@@ -6,7 +6,7 @@ const foto = n => fotos['../assets/images/gallery/' + n] || ''
 export const site = {
   name: 'RG Insulfilmes',
   phone: '(41) 99934-2108',
-  whatsapp: '554198710082541999342108',            // 55 + DDD + número
+  whatsapp: '41999342108',            // 55 + DDD + número
   instagram: 'https://www.instagram.com/rginsulfilmescwb/',
   instagramUser: '@rginsulfilmescwb',
   city: 'Curitiba e região',
