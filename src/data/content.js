@@ -5,18 +5,21 @@ const foto = n => fotos['../assets/images/gallery/' + n] || ''
 
 export const site = {
   name: 'RG Insulfilmes',
-  phone: '(41) 99934-2108',
-  whatsapp: '41999342108',            // 55 + DDD + número
+  phone: '(41) 99934-2108',             // como aparece escrito no site
+  whatsapp: '41999342108',              // DDD + número (pode escrever com ou sem espaços/traços; o 55 é colocado sozinho)
   instagram: 'https://www.instagram.com/rginsulfilmescwb/',
   instagramUser: '@rginsulfilmescwb',
   city: 'Curitiba e região',
   yearsText: '15 anos de experiência',
 }
+// Limpa o número (tira espaços, parênteses e traços) e garante o 55 na frente, para o link nunca quebrar
+const digits = site.whatsapp.replace(/\D/g, '')
+export const waNumber = digits.length <= 11 ? '55' + digits : digits
 export const waLink = (t = 'Olá! Vim pelo site da RG Insulfilmes e gostaria de um orçamento.') =>
-  `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(t)}`
+  `https://wa.me/${waNumber}?text=${encodeURIComponent(t)}`
 
 export const menu = [['servicos','Serviços'],['simulador','Simulador'],['galeria','Trabalhos'],['processo','Como funciona']]
-export const levels = [[5,'Máxima'],[20,'Alta'],[35,'Média'],[50,'Discreta'],[70,'Sutil']]   // [% de luz que passa, privacidade]
+export const levels = [[5,'Máxima'],[20,'Alta'],[35,'Média'],[50,'Discreta'],[70,'Sutil']]   // [% de luz que passa, privacidadegi]
 export const facts = [['15 anos','de experiência no mercado'],['Controle solar','películas para todos os vidros'],['Atendimento rápido','orçamento direto no WhatsApp'],['3 frentes','automotivo, residencial e comercial']]
 export const services = [
   ['🚗','Automotivo','Laterais, traseiro, para-brisa e teto solar, com corte alinhado e sem bolhas.'],
