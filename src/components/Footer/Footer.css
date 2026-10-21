@@ -1,0 +1,9 @@
+.footer{padding:3rem 0 7rem;border-top:1px solid var(--line);background:var(--panel);font-size:.875rem}
+.footer__grid{display:grid;gap:2.5rem}
+.footer__logo{width:80px;height:80px;margin-bottom:1rem;border-radius:50%;box-shadow:0 0 0 2px rgba(245,130,32,.6)}
+.footer__about{max-width:20rem;line-height:1.7;color:var(--mute)}
+.footer h4{margin-bottom:1rem;font-size:.875rem;font-weight:700}
+.footer a{display:block;margin-bottom:.5rem;color:var(--mute);transition:color .2s}
+.footer a:hover{color:var(--brand)}
+.footer__copy{margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(44,47,49,.5);text-align:center;font-size:.75rem;color:var(--mute)}
+@media(min-width:768px){.footer{padding-block:4rem}.footer__grid{grid-template-columns:repeat(3,1fr)}}

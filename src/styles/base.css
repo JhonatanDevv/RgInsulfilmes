@@ -1,0 +1,47 @@
+/* ===== Base: reset, layout, botões e animações usados no site todo ===== */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{margin:0;background:var(--ink);color:var(--cream);font-family:var(--font);line-height:1.5;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4,p,dl,dd{margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+::selection{background:var(--brand);color:var(--ink)}
+:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
+
+.container{max-width:var(--maxw);margin:0 auto;padding:0 1rem}
+.section{padding:4rem 0}
+.section--panel{background:var(--panel);border-block:1px solid var(--line)}
+@media(min-width:768px){.section{padding:6rem 0}}
+
+.section-title{font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.section-title em{font-style:normal;color:var(--brand)}
+.section-head{max-width:42rem;margin:0 auto 2.5rem;text-align:center}
+.section-head p{margin-top:1rem;color:var(--mute)}
+@media(min-width:768px){.section-head{margin-bottom:3.5rem}}
+
+.card{border-radius:var(--radius);border:1px solid var(--line);background:var(--card)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem 1.8rem;border:1px solid transparent;border-radius:999px;font-weight:600;transition:all .2s}
+.btn--brand{background:var(--brand);color:var(--ink);box-shadow:0 10px 25px -8px rgb(245 130 32/.5)}
+.btn--brand:hover{background:var(--brand-hi)}
+.btn--ghost{background:var(--card);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--brand)}
+.btn--whatsapp{background:var(--green);color:#fff}
+.btn--whatsapp:hover{filter:brightness(.92)}
+.btn--sm{padding:.6rem 1.25rem;font-size:.875rem}
+.btn--lg{padding:1.2rem 2.5rem;font-size:1.125rem}
+.btn--block{width:100%}
+
+/* botão de escolha (usado no formulário, simulador e filtros) */
+.chip{padding:.6rem 1rem;border:1px solid var(--line);border-radius:.75rem;background:var(--panel);color:var(--mute);font-size:.875rem;font-weight:500;transition:all .2s}
+.chip:hover{border-color:var(--brand)}
+.chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--ink);font-weight:700}
+.chip--pill{border-radius:999px;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+
+/* ===== Animações de rolagem ===== */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease,border-color .2s;transition-delay:var(--d,0ms)}
+.reveal.in{opacity:1;transform:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}}
+.fade-up{animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0ms)}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.fade-up{animation:none}html{scroll-behavior:auto}}

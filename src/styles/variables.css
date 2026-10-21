@@ -1,0 +1,15 @@
+/* ===== CORES, FONTE E MEDIDAS: mude aqui e o site inteiro muda ===== */
+:root {
+  --ink:#0E1011;      /* fundo da página */
+  --panel:#121416;    /* fundo de faixas */
+  --card:#181B1D;     /* fundo dos cartões */
+  --line:#2C2F31;     /* bordas */
+  --cream:#EFEBE3;    /* texto principal */
+  --mute:#A09C93;     /* texto secundário */
+  --brand:#F58220;    /* laranja da logo */
+  --brand-hi:#FF9539; /* laranja ao passar o mouse */
+  --green:#25D366;    /* WhatsApp */
+  --font:Jost,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --radius:24px;
+  --maxw:72rem;
+}

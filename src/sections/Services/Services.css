@@ -1,0 +1,8 @@
+.services__grid{display:grid;gap:1.5rem}
+.services__card{padding:1.5rem}
+.services__card:hover{border-color:var(--brand)}
+.services__icon{display:grid;place-items:center;width:56px;height:56px;margin-bottom:1.5rem;border-radius:1rem;background:rgba(245,130,32,.1);font-size:1.5rem;transition:transform .2s}
+.services__card:hover .services__icon{transform:scale(1.1)}
+.services__card h3{margin-bottom:.75rem;font-size:1.5rem;font-weight:700}
+.services__card p{line-height:1.7;color:var(--mute)}
+@media(min-width:768px){.services__grid{grid-template-columns:repeat(3,1fr);gap:2rem}.services__card{padding:2rem}}

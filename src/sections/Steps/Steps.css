@@ -1,0 +1,6 @@
+.steps__grid{display:grid;gap:1.5rem}
+.steps__card{padding:1.5rem}
+.steps__num{display:grid;place-items:center;width:48px;height:48px;margin-bottom:1.5rem;border-radius:1rem;background:var(--brand);color:var(--ink);font-size:1.25rem;font-weight:800}
+.steps__card h3{margin-bottom:.5rem;font-size:1.25rem;font-weight:700}
+.steps__card p{color:var(--mute)}
+@media(min-width:768px){.steps__grid{grid-template-columns:repeat(3,1fr);gap:2rem}.steps__card{padding:2rem}}
